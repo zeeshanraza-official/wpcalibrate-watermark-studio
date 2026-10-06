@@ -1,0 +1,30 @@
+# Credentials and deployment configs
+scripts/ftp-config.json
+.ftp-deploy.json
+.env
+
+# Staging, packages and archives
+*.zip
+staging_pkg/
+wpcalibrate-watermark-studio/
+
+# AI memory, instructions & dev docs
+.agents/
+.claude/
+AGENTS.md
+CLAUDE.md
+PROJECT_MEMORY.md
+TROUBLESHOOTING.md
+CHANGELOG_AI.md
+TODO_AI.md
+
+# Development tools, stubs & tests
+.vscode/
+stubs/
+tests/
+scripts/
+
+# OS and system files
+.DS_Store
+Thumbs.db
+desktop.ini

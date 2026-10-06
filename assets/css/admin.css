@@ -1,0 +1,360 @@
+/**
+ * WPCalibrate Watermark Studio - Admin Styles
+ * Supporting modern clean UI, responsive cards, tab navigation, and RTL layouts.
+ */
+
+:root {
+	--wpcal-primary: #1e3a8a;
+	--wpcal-primary-hover: #172554;
+	--wpcal-accent: #2563eb;
+	--wpcal-bg-light: #f8fafc;
+	--wpcal-card-bg: #ffffff;
+	--wpcal-border: #e2e8f0;
+	--wpcal-text: #0f172a;
+	--wpcal-text-muted: #64748b;
+	--wpcal-success: #16a34a;
+	--wpcal-danger: #dc2626;
+	--wpcal-warning: #ea580c;
+	--wpcal-radius: 8px;
+	--wpcal-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Admin Menu Branding Icon */
+#toplevel_page_wpcalibrate .wp-menu-image {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+}
+#toplevel_page_wpcalibrate .wp-menu-image img {
+	width: 20px !important;
+	height: 20px !important;
+	max-width: 20px !important;
+	max-height: 20px !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	box-sizing: content-box !important;
+	object-fit: contain !important;
+	vertical-align: middle !important;
+	opacity: 0.85;
+	transition: opacity 0.15s ease-in-out;
+}
+#toplevel_page_wpcalibrate:hover .wp-menu-image img,
+#toplevel_page_wpcalibrate.wp-has-current-submenu .wp-menu-image img,
+#toplevel_page_wpcalibrate.current .wp-menu-image img {
+	opacity: 1 !important;
+}
+
+.wpcalibrate-admin-wrap {
+	max-width: 1280px;
+	margin: 20px auto 40px 10px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	color: var(--wpcal-text);
+}
+
+/* Header */
+.wpcalibrate-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 18px 24px;
+	background: #ffffff;
+	border: 1px solid var(--wpcal-border);
+	border-radius: var(--wpcal-radius);
+	box-shadow: var(--wpcal-shadow);
+	margin-bottom: 20px;
+}
+
+.wpcalibrate-brand {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.wpcalibrate-logo {
+	height: 38px;
+	width: auto;
+	object-fit: contain;
+}
+
+.wpcalibrate-brand h1 {
+	margin: 0;
+	font-size: 22px;
+	font-weight: 700;
+	color: var(--wpcal-primary);
+	line-height: 1.2;
+}
+
+/* Tab Navigation */
+.wpcalibrate-nav-tabs {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid var(--wpcal-border);
+	padding-bottom: 0;
+}
+
+.wpcalibrate-tab-link {
+	padding: 10px 18px;
+	font-size: 14px;
+	font-weight: 600;
+	color: var(--wpcal-text-muted);
+	text-decoration: none;
+	border: 1px solid transparent;
+	border-bottom: none;
+	border-radius: 6px 6px 0 0;
+	background: transparent;
+	transition: all 0.2s ease-in-out;
+}
+
+.wpcalibrate-tab-link:hover {
+	color: var(--wpcal-accent);
+	background: #f1f5f9;
+}
+
+.wpcalibrate-tab-link.active {
+	color: var(--wpcal-primary);
+	background: #ffffff;
+	border-color: var(--wpcal-border) var(--wpcal-border) #ffffff;
+	font-weight: 700;
+	margin-bottom: -1px;
+}
+
+/* Tab Content */
+.wpcalibrate-tab-panel {
+	display: none;
+}
+
+.wpcalibrate-tab-panel.active {
+	display: block;
+}
+
+/* Card */
+.wpcalibrate-card {
+	background: var(--wpcal-card-bg);
+	border: 1px solid var(--wpcal-border);
+	border-radius: var(--wpcal-radius);
+	box-shadow: var(--wpcal-shadow);
+	padding: 24px;
+	margin-bottom: 24px;
+}
+
+.wpcalibrate-card h2 {
+	margin-top: 0;
+	margin-bottom: 8px;
+	font-size: 18px;
+	font-weight: 700;
+	color: var(--wpcal-primary);
+}
+
+.wpcalibrate-card-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+	gap: 20px;
+}
+
+/* Form Tables */
+.wpcalibrate-form-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.wpcalibrate-form-table th {
+	width: 240px;
+	padding: 14px 10px 14px 0;
+	font-weight: 600;
+	vertical-align: top;
+	text-align: start;
+	color: var(--wpcal-text);
+}
+
+.wpcalibrate-form-table td {
+	padding: 14px 0;
+	vertical-align: top;
+}
+
+.wpcalibrate-form-table td input[type="text"],
+.wpcalibrate-form-table td input[type="number"],
+.wpcalibrate-form-table td select {
+	min-width: 260px;
+	max-width: 100%;
+	border-radius: 4px;
+	border: 1px solid #cbd5e1;
+	padding: 6px 10px;
+}
+
+.wpcalibrate-form-table td input[type="number"].small-text {
+	min-width: 90px;
+}
+
+/* Interactive Watermark Preview Box */
+.wpcalibrate-preview-wrapper {
+	background: #0f172a;
+	padding: 20px;
+	border-radius: var(--wpcal-radius);
+	box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.wpcalibrate-preview-header {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #94a3b8;
+	font-size: 13px;
+	margin-bottom: 12px;
+}
+
+.wpcalibrate-preview-stage {
+	position: relative;
+	width: 100%;
+	max-width: 720px;
+	height: 480px;
+	overflow: hidden;
+	border-radius: 6px;
+	background-color: #1e293b;
+	background-size: cover;
+	background-position: center;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.preview-layer-image {
+	position: absolute;
+	pointer-events: none;
+	user-select: none;
+	transform-origin: top left;
+	display: none;
+}
+
+.preview-layer-image img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.preview-layer-text {
+	position: absolute;
+	pointer-events: none;
+	user-select: none;
+	font-family: 'Outfit', sans-serif;
+	font-weight: 600;
+	white-space: nowrap;
+	line-height: 1;
+	display: none;
+}
+
+/* Metric Cards */
+.wpcalibrate-metrics-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 16px;
+	margin-bottom: 24px;
+}
+
+.metric-card {
+	background: #ffffff;
+	border: 1px solid var(--wpcal-border);
+	border-radius: var(--wpcal-radius);
+	box-shadow: var(--wpcal-shadow);
+	padding: 16px 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.metric-title {
+	font-size: 13px;
+	color: var(--wpcal-text-muted);
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+}
+
+.metric-value {
+	font-size: 28px;
+	font-weight: 800;
+	color: var(--wpcal-primary);
+	line-height: 1;
+}
+
+.metric-card.metric-success .metric-value { color: var(--wpcal-success); }
+.metric-card.metric-info .metric-value { color: var(--wpcal-accent); }
+.metric-card.metric-warning .metric-value { color: var(--wpcal-warning); }
+.metric-card.metric-danger .metric-value { color: var(--wpcal-danger); }
+
+/* Progress Bar */
+.progress-bar-container {
+	width: 100%;
+	height: 16px;
+	background: #e2e8f0;
+	border-radius: 999px;
+	overflow: hidden;
+	margin-top: 10px;
+}
+
+.progress-bar-fill {
+	height: 100%;
+	background: linear-gradient(90deg, #2563eb, #16a34a);
+	transition: width 0.3s ease-in-out;
+}
+
+/* Badges & Status */
+.badge {
+	display: inline-block;
+	padding: 4px 8px;
+	border-radius: 4px;
+	font-size: 12px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.badge-success { background: #dcfce7; color: #15803d; }
+.badge-warning { background: #fef9c3; color: #854d0e; }
+.badge-danger  { background: #fee2e2; color: #b91c1c; }
+
+.log-level-badge {
+	display: inline-block;
+	padding: 2px 6px;
+	border-radius: 3px;
+	font-size: 11px;
+	font-weight: 700;
+}
+.log-level-error   { background: #fee2e2; color: #b91c1c; }
+.log-level-warning { background: #fef3c7; color: #92400e; }
+.log-level-info    { background: #e0f2fe; color: #0369a1; }
+
+/* Support & Contact Cards */
+.support-contact-list {
+	list-style: none;
+	padding: 0;
+	margin: 14px 0;
+}
+
+.support-contact-list li {
+	margin-bottom: 10px;
+	font-size: 14px;
+}
+
+.support-contact-list a {
+	color: var(--wpcal-accent);
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.support-contact-list a:hover {
+	text-decoration: underline;
+}
+
+/* RTL Support */
+body.rtl .wpcalibrate-form-table th {
+	text-align: right;
+	padding: 14px 0 14px 10px;
+}
+
+body.rtl .wpcalibrate-admin-wrap {
+	margin: 20px 10px 40px auto;
+}
